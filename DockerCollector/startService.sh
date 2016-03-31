@@ -14,9 +14,9 @@ then
     exit 1
 else   
     if [ -f "$workroot/ServerMain.pyc" ]; then
-        python $workroot/ServerMain.pyc >$workroot/main.out
+        nohup python $workroot/ServerMain.pyc >$workroot/main.out &
     else
-        python $workroot/ServerMain.py >$workroot/main.out
+        nohup python $workroot/ServerMain.py >$workroot/main.out &
     fi
     echo "--------------started---------------"
 

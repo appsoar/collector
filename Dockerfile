@@ -44,4 +44,4 @@ EXPOSE 80 27017
 
 ENTRYPOINT 
 
-CMD $START_SCRIPT
+CMD $START_SCRIPT && tailf $WORK_DIR/source/Trace/logs/operation.log
